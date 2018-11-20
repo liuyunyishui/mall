@@ -25,6 +25,7 @@ public class UserController {
 
     /**
      * 用户登录
+     *
      * @param username
      * @param password
      * @param session
@@ -42,6 +43,7 @@ public class UserController {
 
     /**
      * 登出
+     *
      * @param session
      * @return
      */
@@ -102,7 +104,7 @@ public class UserController {
         return iUserService.resetPassword(passwordOld, passwordNew, currentUser);
     }
 
-    @RequestMapping(value = "update_information.do",method = RequestMethod.POST)
+    @RequestMapping(value = "update_information.do", method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse<User> updateInformation(User user, HttpSession session) {
         User currentUser = (User) session.getAttribute(Const.CURRENT_USER);
@@ -119,7 +121,7 @@ public class UserController {
         return response;
     }
 
-    @RequestMapping(value = "get_information.do",method = RequestMethod.POST)
+    @RequestMapping(value = "get_information.do", method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse<User> getInformation(HttpSession session) {
         User currentUser = (User) session.getAttribute(Const.CURRENT_USER);

@@ -56,8 +56,8 @@ public class ServerResponse<T> implements Serializable {
     }
 
     /*
-    * 解决data为String时调用构造器ServerResponse(int status, String msg)
-    * */
+     * 解决data为String时调用构造器ServerResponse(int status, String msg)
+     * */
     public static <T> ServerResponse<T> createBySuccess() {
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode());
     }

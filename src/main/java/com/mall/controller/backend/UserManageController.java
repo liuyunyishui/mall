@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 @RequestMapping("/manage/user/")
-public class UserManageController  {
+public class UserManageController {
 
     @Autowired
     private IUserService iUserService;
@@ -26,10 +26,10 @@ public class UserManageController  {
     @ResponseBody
     public ServerResponse<User> login(String username, String password, HttpSession session) {
         ServerResponse<User> response = iUserService.login(username, password);
-        if(response.isSuccess()) {
+        if (response.isSuccess()) {
             User user = response.getData();
             //角色判断
-            if(Const.Role.ROLE_ADMIN == user.getRole()) {
+            if (Const.Role.ROLE_ADMIN == user.getRole()) {
                 session.setAttribute(Const.CURRENT_USER, user);
                 return response;
             } else {

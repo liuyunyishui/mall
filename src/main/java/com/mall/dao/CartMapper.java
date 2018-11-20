@@ -1,7 +1,6 @@
 package com.mall.dao;
 
 import com.mall.pojo.Cart;
-import com.mall.pojo.Category;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

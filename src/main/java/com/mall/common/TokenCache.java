@@ -29,7 +29,7 @@ public class TokenCache {
                 }
             });
 
-    public static void setKey(String key, String value){
+    public static void setKey(String key, String value) {
         localCache.put(key, value);
     }
 
@@ -37,7 +37,7 @@ public class TokenCache {
         String value = null;
         try {
             value = localCache.get(key);
-            if("null".equals(value)) {
+            if ("null".equals(value)) {
                 return null;
             }
             return value;

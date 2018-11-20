@@ -43,8 +43,8 @@
         </filter>
     </appender>
 
-    <logger name="com.mall" additivity="false" level="INFO" >
-        <appender-ref ref="mall" />
+    <logger name="com.mall" additivity="false" level="INFO">
+        <appender-ref ref="mall"/>
         <appender-ref ref="console"/>
     </logger>
 
