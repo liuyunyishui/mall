@@ -1,4 +1,4 @@
 # mall learning
 
-[this course](https://coding.imooc.com/learn/list/96.html)
+[this course](https://coding.imooc.com/class/96.html) from [imooc](https://imooc.com)
 
